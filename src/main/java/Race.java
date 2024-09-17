@@ -14,8 +14,10 @@ public class Race {
     //Вычисляем победителя
     void whoWinn() {
         Car car = new Car();
+        int distance = 0;
         for (Car e : arrCar) {
-            if (car.speed < e.speed) {
+            if (distance < e.speed*24) {
+                distance = e.speed*24;
                 car = e;
             }
         }
